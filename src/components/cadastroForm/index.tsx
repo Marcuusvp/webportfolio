@@ -16,7 +16,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>
 
 function RegisterForm() {
-    const { register, handleSubmit, formState: { errors }, setValue } = useForm<FormData>({
+    const { register, handleSubmit, formState: { errors }} = useForm<FormData>({
         resolver: zodResolver(schema),
         mode: "onChange"
     })

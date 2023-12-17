@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod'

@@ -28,6 +28,7 @@ const LOCAL_STORAGE_KEY__ACCESS_TOKEN = 'APP_ACCESS_TOKEN';
 
 export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
     const [accessToken, setAccessToken] = useState<string>();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [permissoesContext, setPermissoesContext] = useState<string[]>([]);
     const [usuario, setUsuario] = useState<string>();
     const [userInfo, setUserInfo] = useState<IAcessToken | null>(null);

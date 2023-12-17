@@ -15,7 +15,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>
 
 const LoginForm: React.FC = () => {
-    const { isAuthenticated, login, logout, username} = useAuthContext();
+    const { login, username} = useAuthContext();
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
         resolver: zodResolver(schema),
