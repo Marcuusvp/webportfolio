@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { AuthService } from "../services/api/auth/AuthService";
 import { Api } from "../services/api/axios-config";
@@ -28,8 +29,7 @@ const LOCAL_STORAGE_KEY__ACCESS_TOKEN = 'APP_ACCESS_TOKEN';
 
 export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
     const [accessToken, setAccessToken] = useState<string>();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [permissoesContext, setPermissoesContext] = useState<string[]>([]);
+    const [, setPermissoesContext] = useState<string[]>([]);
     const [usuario, setUsuario] = useState<string>();
     const [userInfo, setUserInfo] = useState<IAcessToken | null>(null);
     //const SESSION_TIMEOUT = 1 * 60 * 60 * 1000; // Tempo limite da sessão em milissegundos, por exemplo, 1 hora
